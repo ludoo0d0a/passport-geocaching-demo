@@ -1,35 +1,37 @@
 {
   "name": "passport-geocaching-demo",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "./dist/index",
   "scripts": {
     "start": "nodemon --exec babel-node src/app.js",
     "start:native": "nodemon --exec node --experimental-modules src/app.js",
     "prepublish": "npm run build",
     "dev": "babel-node src/app.js",
+    "sync": "cpx 'src/views/**/*.ejs' dist/views --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d dist --source-maps"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
+    "@babel/polyfill": "^7.6.0",
     "body-parser": "1.19.0",
     "cookie-parser": "1.4.4",
-    "ejs": "2.6.2",
+    "ejs": "2.7.1",
     "express": "4.17.1",
     "express-ejs-layouts": "^2.5.0",
     "express-session": "1.16.2",
     "method-override": "3.0.0",
     "morgan": "1.9.1",
     "passport": "0.4.0",
-    "passport-geocaching": "0.2.1"
+    "passport-geocaching": "0.2.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/node": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/register": "^7.5.5",
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/register": "^7.6.0",
     "babel-loader": "^8.0.6",
-    "nodemon": "^1.19.1"
+    "cpx": "^1.5.0",
+    "nodemon": "^1.19.2"
   }
 }
